@@ -1,1 +1,24 @@
-En esta sección se detalla la implementación física de la solución, abarcando desde el diseño del circuito electrónico externo hasta la síntesis en el chip FPGA.
+## 2. Dominio Comportamental
+
+En esta sección se describe el comportamiento lógico del sistema. El objetivo es definir claramente qué hace el diseño, cuáles son sus entradas y salidas, y cómo reacciona ante diferentes estímulos, abstrayéndonos de la implementación física.
+
+### 2.1 Diagrama de Caja Negra
+El diagrama de caja negra representa el módulo principal (top-level) del diseño, exponiendo únicamente las interfaces de entrada y salida del sistema sin entrar en detalles de la lógica interna.
+
+> **Nota:** Aquí defines tus puertos, por ejemplo: reloj (`clk`), reset, botones de entrada, y señales de salida hacia LEDs o displays.
+
+![Diagrama de Caja Negra](./docs/images/caja_negra.png)
+*(Reemplaza con la ruta a tu imagen)*
+
+### 2.2 Tabla de Verdad
+Para la parte combinacional del circuito, el comportamiento se rige por la siguiente tabla de verdad, la cual define el estado de las salidas para todas las combinaciones posibles de las entradas:
+
+
+### 2.3 Algoritmo y Lógica de Funcionamiento
+El sistema funciona bajo el siguiente principio algorítmico... *(Describe aquí en texto breve qué hace. Por ejemplo: "El sistema lee los interruptores, realiza una suma binaria y muestra el resultado solo si el botón de 'Enable' está presionado".)*
+
+### 2.4 Diagrama de Flujo
+Para ilustrar la ejecución secuencial o las transiciones de estado del algoritmo (ideal si tienes una Máquina de Estados Finita - FSM), el siguiente diagrama de flujo detalla el proceso de toma de decisiones del módulo:
+
+![Diagrama de Flujo](./docs/images/diagrama_flujo.png)
+*(Reemplaza con la ruta a tu imagen)*
