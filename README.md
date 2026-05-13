@@ -1,1 +1,1 @@
-Hi
+Este repositorio contiene la documentación y el desarrollo del laboratorio "My First Design" del curso de Electrónica Digital 1. La solución está estructurada siguiendo los tres dominios del diseño digital: Comportamental, Estructural y Físico.
