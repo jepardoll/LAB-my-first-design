@@ -13,7 +13,7 @@ Este dominio define qué hace el sistema, sus interfaces y su lógica de control
 ### Diagrama de Caja Negra
 Establece las señales de entrada (estímulos/sensores) y las señales de salida (actuadores/indicadores) del sistema.
 
-![Diagrama de Caja Negra](LAB-my-first-design/Imagenes/DiagramaCajaNegra.jpg)
+![Diagrama de Caja Negra](LAB-my-first-design/Imagenes/DiagramaCajaNegra.png)
 
 ### Diagrama de Flujo
 Describe el algoritmo de toma de decisiones para conmutar entre las fuentes de energía y responder a las condiciones de seguridad.
