@@ -96,8 +96,35 @@ Define la lógica combinacional exacta que rige el sistema. A partir del mapa de
 
 
 
+### Descripción en Lenguaje de Hardware (Verilog)
+A partir de las ecuaciones obtenidas, el comportamiento del sistema se describe utilizando el lenguaje de descripción de hardware Verilog. Este código es el que define la lógica que posteriormente será sintetizada en el chip físico:
+
+```verilog
 
 
+module circuito_casa (
+  input P,
+  input F1,
+  input F2,
+  input L,
+  output C1,
+  output C2,
+  output CE,
+  output B,
+  output SL,
+  output SRE
+);
+  wire s0;
+  assign s0 = ~ P;
+  assign C1 = (~ F1 & F2 & s0);
+  assign CE = ((F1 & s0) | (F2 & s0));
+  assign C2 = P;
+  assign B = F2;
+  assign SL = L;
+  assign SRE = F1;
+endmodule
+
+```
 ---
 
 
