@@ -1,6 +1,6 @@
 # Sistema de Respaldo Eléctrico Residencial 
 
-Este repositorio contiene la documentación técnica, diseño y solución de un del laboratorio My First Design. El laboratorio consistia en diseñar un Sistema Lógico de Respaldo Eléctrico que gestiona de manera automática la prioridad de alimentación entre la red eléctrica convencional y un banco de baterías, incorporando medidas de seguridad mediante un botón de paro de emergencia.
+Este repositorio contiene la documentación técnica, diseño y solución del laboratorio My First Design. El laboratorio consistia en diseñar un Sistema Lógico de Respaldo Eléctrico que gestiona de manera automática la prioridad de alimentación entre la red eléctrica convencional y un banco de baterías, incorporando medidas de seguridad mediante un botón de paro de emergencia.
 
 El proyecto está estructurado bajo tres dominios fundamentales del diseño electrónico: **Comportamental**, **Estructural** y **Físico**.
 
