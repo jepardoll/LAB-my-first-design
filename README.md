@@ -97,7 +97,7 @@ Define la lógica combinacional exacta que rige el sistema. A partir del mapa de
 
 
 ### Descripción en Lenguaje de Hardware (Verilog)
-A partir de las ecuaciones obtenidas, el comportamiento del sistema se describe utilizando el lenguaje de descripción de hardware Verilog. Este código es el que define la lógica que posteriormente será sintetizada en el chip físico:
+A partir de las ecuaciones obtenidas, el comportamiento del sistema se describe utilizando el lenguaje de descripción de hardware Verilog. Este código es el que define la lógica que posteriormente será sintetizada en la FPGA:
 
 ```verilog
 
@@ -163,30 +163,27 @@ Esquemático que implementa las ecuaciones booleanas obtenidas en el dominio com
 
 ## 3. Dominio Físico
 
+Este dominio abarca la materialización del circuito, considerando componentes electrónicos reales, niveles de voltaje (3.3V) y etapas de aislamiento y potencia. 
 
+### Implementación en FPGA y Asignación de Pines
+Para llevar la lógica al mundo real, el código Verilog descrito en el dominio comportamental es recibido por una tarjeta **FPGA Cyclone IV Waveshare**. Mediante un proceso de **síntesis**, el entorno de desarrollo traduce este código y configura el hardware interno de la FPGA de manera física para que se comporte exactamente como el circuito lógico diseñado. 
 
-Este dominio abarca la materialización del circuito, considerando componentes electrónicos reales, niveles de voltaje (3.3V) y etapas de aislamiento y potencia.
+Para que la FPGA interactúe con el entorno, se realiza la asignación de pines físicos (Pin Planner), emparejando las variables del código fuente con los terminales físicos de la tarjeta:
 
+![Asignación de Pines](Imagenes/AsignacionPines.png)
 
-
-### Circuito Físico
-
-Implementación del esquemático electrónico dividida en cuatro etapas principales:
-
-1.  **Etapa de Entrada:** Interruptores (switches) configurados con resistencias de *pull-down* (10 kΩ y 5.6 kΩ) para garantizar niveles lógicos estables en los pines de entrada.
-
-2.  **Etapa de Procesamiento:** Unidad central (IC) que procesa las señales lógicas.
-
-3.  **Etapa de Indicación:** Arreglo de LEDs con resistencias limitadoras de corriente (330 Ω) para proveer retroalimentación visual del estado del sistema (IRE, IL, IB, ICE).
-
-4.  **Etapa de Potencia/Conmutación:** Uso de módulos de relés electromecánicos. El sistema lógico controla los relés para enrutar físicamente la energía (Red eléctrica o Batería) hacia la carga final (Casa), asegurando aislamiento galvánico entre la lógica de 3.3V y el voltaje de potencia.
-
-
+### Circuito Físico Integrado
+La implementación completa del esquemático electrónico se divide en cuatro etapas principales interconectadas alrededor de la FPGA:
+1.  **Etapa de Entrada:** Interruptores (switches) configurados con resistencias de *pull-down* (10 kΩ y 5.6 kΩ) para garantizar niveles lógicos estables (0V o 3.3V) en los pines de entrada de la FPGA.
+2.  **Etapa de Procesamiento (FPGA):** La tarjeta **FPGA Cyclone IV Waveshare** previamente programada, que evalúa en tiempo real las señales lógicas.
+3.  **Etapa de Indicación:** Arreglo de LEDs conectados a los pines de salida de la FPGA con resistencias limitadoras de corriente (330 Ω) para proveer retroalimentación visual del estado del sistema (IRE, IL, IB, ICE).
+4.  **Etapa de Potencia/Conmutación:** Uso de módulos de relés electromecánicos. La FPGA controla los relés para enrutar físicamente la energía de potencia (Red eléctrica o Batería) hacia la carga final (Casa), asegurando aislamiento galvánico entre la lógica de 3.3V y el voltaje principal.
 
 ![Circuito Físico](Imagenes/CircuitoFisico.png)
 
-
-
 ---
 
+## Archivos del Proyecto
+> 📁 **Nota:** Todos los archivos de configuración, síntesis y el proyecto completo utilizado para la programación de la tarjeta se encuentran en la carpeta **`programación FPGA`** de este repositorio.
+> 
 /*
