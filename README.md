@@ -55,6 +55,21 @@ Esquemático que implementa las ecuaciones booleanas obtenidas en el dominio com
 
 ---
 
+## Diccionario de Señales (Entradas / Salidas)
+
+| Tipo | Variable Lógica | Etiqueta Física | Descripción |
+| :--- | :---: | :---: | :--- |
+| **Entrada** | $P$ | `P` | Botón de Paro (Emergencia) |
+| **Entrada** | $F1$ | `RE` | Sensor / Disponibilidad de Red Eléctrica |
+| **Entrada** | $F2$ | `Ba` | Sensor / Disponibilidad de Batería |
+| **Entrada** | $L$ | `Ls` | Sensor de Luz Solar |
+| **Salida** | $CE$ | `ICE` | Indicador de Casa Energizada (Lógica / LED) |
+| **Salida** | $C1$ / $C2$ | `IN` (Relés) | Señales de control hacia los módulos de relé |
+| **Salida** | $SRE$ | `IRE` | Indicador LED de Red Eléctrica |
+| **Salida** | $B$ | `IB` | Indicador LED de Batería |
+| **Salida** | $SL$ | `IL` | Indicador LED de Luz Solar |
+
+
 ## 3. Dominio Físico
 
 Este dominio abarca la materialización del circuito, considerando componentes electrónicos reales, niveles de voltaje (3.3V) y etapas de aislamiento y potencia.
@@ -70,16 +85,3 @@ Implementación del esquemático electrónico dividida en cuatro etapas principa
 
 ---
 
-## Diccionario de Señales (Entradas / Salidas)
-
-| Tipo | Variable Lógica | Etiqueta Física | Descripción |
-| :--- | :---: | :---: | :--- |
-| **Entrada** | $P$ | `P` | Botón de Paro (Emergencia) |
-| **Entrada** | $F1$ | `RE` | Sensor / Disponibilidad de Red Eléctrica |
-| **Entrada** | $F2$ | `Ba` | Sensor / Disponibilidad de Batería |
-| **Entrada** | $L$ | `Ls` | Sensor de Luz Solar |
-| **Salida** | $CE$ | `ICE` | Indicador de Casa Energizada (Lógica / LED) |
-| **Salida** | $C1$ / $C2$ | `IN` (Relés) | Señales de control hacia los módulos de relé |
-| **Salida** | $SRE$ | `IRE` | Indicador LED de Red Eléctrica |
-| **Salida** | $B$ | `IB` | Indicador LED de Batería |
-| **Salida** | $SL$ | `IL` | Indicador LED de Luz Solar |
