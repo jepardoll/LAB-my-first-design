@@ -186,4 +186,4 @@ La implementación completa del esquemático electrónico se divide en cuatro et
 ## Archivos del Proyecto
 > 📁 **Nota:** Todos los archivos de configuración, síntesis y el proyecto completo utilizado para la programación de la tarjeta se encuentran en la carpeta **`programación FPGA`** de este repositorio.
 > 
-/*
+
